@@ -15,8 +15,9 @@ document.querySelector('textarea').addEventListener('input', e => {
         } else {
             return `<ruby title="点击发音">${e}</ruby>`
         }
-    })
+    }).replaceAll('\n', '<br/>');
     document.getElementById('preview').innerHTML = r;
+    document.getElementById('preview').style.whiteSpace = 'pre-wrap'
     Array.from(document.querySelectorAll('ruby')).forEach(e => {
         e.addEventListener('click', () => {
             window.speechSynthesis.cancel();
