@@ -2,6 +2,8 @@
 
 > A tool for learning Spanish
 
+> [https://spanish.imiku.me/](https://spanish.imiku.me/)
+
 - 该网站用于帮助初学西语的人更快的练习正确的发音
 - 输入西语单词或短文，将显示每个单词的分音节和音节的重读
 - 点击单词可以发音
