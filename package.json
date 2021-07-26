@@ -1,0 +1,24 @@
+{
+  "name": "spanish",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build --no-source-maps index.html"
+  },
+  "dependencies": {
+    "parcel": "^2.0.0-beta.2",
+    "silabea": "^1.0.0"
+  },
+  "devDependencies": {
+    "@parcel/optimizer-cssnano": "2.0.0-nightly.605",
+    "@parcel/optimizer-htmlnano": "2.0.0-nightly.605",
+    "@parcel/packager-css": "2.0.0-nightly.605",
+    "@parcel/packager-html": "2.0.0-nightly.605",
+    "@parcel/transformer-css": "2.0.0-nightly.605",
+    "@parcel/transformer-html": "2.0.0-nightly.605",
+    "@parcel/transformer-postcss": "2.0.0-nightly.605",
+    "@parcel/transformer-posthtml": "2.0.0-nightly.605",
+    "postcss": "^8.2.1"
+  }
+}
