@@ -2,6 +2,8 @@
 
 > A tool for learning Spanish
 
+![](./gif.gif)
+
 > [https://spanish.imiku.me/](https://spanish.imiku.me/)
 
 - 该网站用于帮助初学西语的人更快的练习正确的发音
