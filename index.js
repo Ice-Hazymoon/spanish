@@ -5,7 +5,6 @@ document.querySelector('textarea').addEventListener('input', e => {
     const r = e.target.value.replace(/([\w\'áéíóúÁÉÍÓÚñÑçÇüÜ]+)/g, e => {
         const silabas = silabea.getSilabas(e);
         const s = silabas.silabas.map(e => e.silaba);
-        console.log(silabas);
         if (s.length > 1) {
             return `<ruby title="点击发音">${e}<rt>${s.map((e, i) => {
                 if (i + 1 === silabas.tonica) {
@@ -25,8 +24,9 @@ document.querySelector('textarea').addEventListener('input', e => {
             window.speechSynthesis.cancel();
             const utterThis = new window.SpeechSynthesisUtterance();
             utterThis.text = e.childNodes[0].nodeValue;
-            utterThis.lang = 'es';
+            utterThis.lang = 'es-ES';
             utterThis.volume = 1;
+            utterThis.voice = speechSynthesis.getVoices().filter(e => e.lang === 'es-ES')[0];
             window.speechSynthesis.speak(utterThis);
         })
     })
