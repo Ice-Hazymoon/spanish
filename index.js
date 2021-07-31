@@ -1,9 +1,11 @@
 const silabea = require('silabea');
 
 document.querySelector('textarea').addEventListener('input', e => {
-    const r = e.target.value.replaceAll(/([\w\'áéíóúÁÉÍÓÚñÑçÇüÜ]+)/g, e => {
+    console.log(e.target);
+    const r = e.target.value.replace(/([\w\'áéíóúÁÉÍÓÚñÑçÇüÜ]+)/g, e => {
         const silabas = silabea.getSilabas(e);
         const s = silabas.silabas.map(e => e.silaba);
+        console.log(silabas);
         if (s.length > 1) {
             return `<ruby title="点击发音">${e}<rt>${s.map((e, i) => {
                 if (i + 1 === silabas.tonica) {
@@ -15,7 +17,7 @@ document.querySelector('textarea').addEventListener('input', e => {
         } else {
             return `<ruby title="点击发音">${e}</ruby>`
         }
-    }).replaceAll('\n', '<br/>');
+    }).replace(/\n/g, '<br/>');
     document.getElementById('preview').innerHTML = r;
     document.getElementById('preview').style.whiteSpace = 'pre-wrap'
     Array.from(document.querySelectorAll('ruby')).forEach(e => {
