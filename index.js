@@ -2,7 +2,7 @@ const silabea = require('silabea');
 
 document.querySelector('textarea').addEventListener('input', e => {
     console.log(e.target);
-    const r = e.target.value.replace(/(-?\d+(,\d{3})*(\.\d{1,3})?%?)|([\w\'áéíóúÁÉÍÓÚñÑçÇüÜ]+|[0-9]+)/g, e => {
+    const r = e.target.value.replace(/(-?\d+((,|\.)\d{3})*%?)|([\w\'áéíóúÁÉÍÓÚñÑçÇüÜ]+|[0-9]+)/g, e => {
         const silabas = silabea.getSilabas(e);
         const s = silabas.silabas.map(e => e.silaba);
         if (s.length > 1) {
